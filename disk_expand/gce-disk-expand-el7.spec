@@ -49,5 +49,8 @@ restorecon /etc/fstab
 %preun
 %systemd_preun expand-root.service
 
+%post
+systemctl enable expand-root.service
+
 %postun
 %systemd_postun expand-root.service
